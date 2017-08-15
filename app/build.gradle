@@ -2,7 +2,7 @@ apply plugin: 'android'
 
 android {
     compileSdkVersion 15
-    buildToolsVersion "19.1.0"
+    buildToolsVersion "26.0.0"
 
     defaultConfig {
         applicationId "swin.examples.StaticClock"
@@ -11,4 +11,8 @@ android {
         versionCode 1
         versionName "1.0"
     }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.0.1'
 }
