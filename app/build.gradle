@@ -1,11 +1,11 @@
 apply plugin: 'android'
 
 android {
-    compileSdkVersion 15
-    buildToolsVersion "26.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
 
     defaultConfig {
-        applicationId "swin.examples.StaticClock"
+        applicationId "swin.examples"
         minSdkVersion 15
         targetSdkVersion 15
         versionCode 1
@@ -14,5 +14,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

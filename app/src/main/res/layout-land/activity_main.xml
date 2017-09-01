@@ -22,12 +22,6 @@
             android:inputType="numberDecimal"
             android:text="0.0"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,11 +34,6 @@
             android:inputType="numberDecimal"
             android:text="0.0"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,16 +49,24 @@
 
     </LinearLayout>
 
-    <CheckBox
-        android:id="@+id/metres"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Metres"/>
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/convert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Convert"/>
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"/>
+
+        <CheckBox
+            android:id="@+id/metres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metres"/>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>
