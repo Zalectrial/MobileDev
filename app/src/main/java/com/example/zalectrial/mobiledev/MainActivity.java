@@ -1,7 +1,10 @@
 package com.example.zalectrial.mobiledev;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +12,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button temperatureButton = (Button) findViewById(R.id.temp_convert_button);
+        Button distanceButton = (Button) findViewById(R.id.distance_convert_button);
+
+        temperatureButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent temperatureIntent = new Intent(getApplicationContext(), TemperatureActivity.class);
+                startActivity(temperatureIntent);
+            }
+        });
+
+        distanceButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent distanceIntent = new Intent(getApplicationContext(), DistanceActivity.class);
+                startActivity(distanceIntent);
+            }
+        });
     }
 }

@@ -67,7 +67,7 @@
         android:text="@string/metres_text"/>
 
     <Button
-        android:id="@+id/convert"
+        android:id="@+id/distance_convert_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/convert_button"/>
