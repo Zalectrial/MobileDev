@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MobileDev</string>
+    <string name="temp_button">Temperature</string>
+    <string name="distance_button">Distance</string>
 </resources>
