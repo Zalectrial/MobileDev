@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button temperatureButton = (Button) findViewById(R.id.temp_convert_button);
-        Button distanceButton = (Button) findViewById(R.id.distance_convert_button);
+        Button temperatureButton = (Button) findViewById(R.id.temp_button);
+        Button distanceButton = (Button) findViewById(R.id.distance_button);
 
         temperatureButton.setOnClickListener(new View.OnClickListener() {
 
