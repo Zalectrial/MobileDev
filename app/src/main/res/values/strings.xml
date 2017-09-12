@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">MobileDev</string>
+    //Main Activity
     <string name="temp_button">Temperature</string>
     <string name="distance_button">Distance</string>
+
+    //Temperature Activity
+    <string name="celsius_text">Celsius:</string>
+    <string name="convert_button">Convert</string>
+
+    //Distance Activity
 </resources>
