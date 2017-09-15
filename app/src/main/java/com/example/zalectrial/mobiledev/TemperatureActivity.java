@@ -25,6 +25,8 @@ public class TemperatureActivity extends AppCompatActivity {
                 convertedTemp.setText(convertTemperature(String.valueOf(celsius.getText())));
             }
         });
+        restoreState(savedInstanceState);
+        convertButton.callOnClick();
     }
 
     private String convertTemperature(String celsius) {
@@ -37,5 +39,20 @@ public class TemperatureActivity extends AppCompatActivity {
         catch (NumberFormatException nfe) {
             return "ERR";
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        EditText celsius = (EditText) findViewById(R.id.temp_celsius);
+        String inputTemp = celsius.getText().toString();
+        outState.putString("inputTemp", inputTemp);
+        super.onSaveInstanceState(outState);
+    }
+
+    private void restoreState(Bundle state) {
+        if (state == null) return;
+        EditText celsius = (EditText) findViewById(R.id.temp_celsius);
+        String inputTemp = state.getString("inputTemp");
+        celsius.setText(inputTemp);
     }
 }
