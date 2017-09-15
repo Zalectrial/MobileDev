@@ -26,7 +26,6 @@ public class TemperatureActivity extends AppCompatActivity {
             }
         });
         restoreState(savedInstanceState);
-        convertButton.callOnClick();
     }
 
     private String convertTemperature(String celsius) {
