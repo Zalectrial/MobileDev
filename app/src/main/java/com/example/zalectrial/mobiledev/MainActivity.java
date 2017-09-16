@@ -14,15 +14,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView burger = (ImageView) findViewById(R.id.burger);
+        burger.setTag(R.drawable.burger);
         ImageView cake = (ImageView) findViewById(R.id.cake);
+        cake.setTag(R.drawable.cake);
         ImageView pizza = (ImageView) findViewById(R.id.pizza);
+        pizza.setTag(R.drawable.pizza);
         ImageView smashed_avocado = (ImageView) findViewById(R.id.smashed_avocado);
+        smashed_avocado.setTag(R.drawable.smashed_avocado);
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String image = String.valueOf(v.getId());
                 Intent intent = new Intent(getApplicationContext(), ImageDisplayActivity.class);
-                intent.putExtra("imageName", image);
+                intent.putExtra("imageName", (Integer) v.getTag());
                 startActivity(intent);
             }
         };
