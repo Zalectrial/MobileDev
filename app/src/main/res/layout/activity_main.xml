@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zalectrial.mobiledev.MainActivity">
 
-    <ImageView
-        android:id="@+id/burger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/burgerDesc"
-        android:src="@drawable/burger"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/cake"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/cakeDesc"
-        android:src="@drawable/cake"/>
+        <ImageView
+            android:id="@+id/burger"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/burgerDesc"
+            android:src="@drawable/burger"/>
 
-    <ImageView
-        android:id="@+id/pizza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/pizzaDesc"
-        android:src="@drawable/pizza"/>
+        <ImageView
+            android:id="@+id/cake"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/cakeDesc"
+            android:src="@drawable/cake"/>
 
-    <ImageView
-        android:id="@+id/smashed_avocado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/smashed_avoDesc"
-        android:src="@drawable/smashed_avocado"/>
+        <ImageView
+            android:id="@+id/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/pizzaDesc"
+            android:src="@drawable/pizza"/>
 
-</TableLayout>
+        <ImageView
+            android:id="@+id/smashed_avocado"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/smashed_avoDesc"
+            android:src="@drawable/smashed_avocado"/>
+
+    </TableLayout>
+
+
+
+</ScrollView>
