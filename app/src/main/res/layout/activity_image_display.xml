@@ -7,10 +7,12 @@
     tools:context="com.example.zalectrial.mobiledev.ImageDisplayActivity">
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/image_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -6,23 +6,27 @@
     tools:context="com.example.zalectrial.mobiledev.MainActivity">
 
     <ImageView
+        android:id="@+id/burger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/burger"/>
 
     <ImageView
+        android:id="@+id/cake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/cake"/>
 
     <ImageView
+        android:id="@+id/pizza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/pizza"/>
 
     <ImageView
+        android:id="@+id/smashed_avocado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/smashed_avocado"/>
 
 </TableLayout>
