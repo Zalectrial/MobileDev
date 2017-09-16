@@ -14,7 +14,8 @@ public class ImageDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_image_display);
         ImageView image = (ImageView) findViewById(R.id.image);
         TextView description = (TextView) findViewById(R.id.image_desc);
-        int image_name = getIntent().getExtras().getInt("imageName");
+        int image_name = getIntent().getExtras().getInt(getString(R.string.imageName));
         image.setImageDrawable(getDrawable(image_name));
+        description.setText(getIntent().getExtras().getCharSequence(getString(R.string.imageDesc)));
     }
 }

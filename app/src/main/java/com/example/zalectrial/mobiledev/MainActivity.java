@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ImageDisplayActivity.class);
-                intent.putExtra("imageName", (Integer) v.getTag());
+                intent.putExtra(getString(R.string.imageName), (Integer) v.getTag());
+                intent.putExtra(getString(R.string.imageDesc), v.getContentDescription());
                 startActivity(intent);
             }
         };

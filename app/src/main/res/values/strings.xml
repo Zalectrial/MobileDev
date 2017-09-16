@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MobileDev</string>
+    <string name="imageName">imageName</string>
+    <string name="imageDesc">imageDesc</string>
+    <string name="burgerDesc">Burgers are amazing</string>
+    <string name="cakeDesc">Cake is delicious</string>
+    <string name="pizzaDesc">Easy food</string>
+    <string name="smashed_avoDesc">Best breakfast ever</string>
 </resources>
