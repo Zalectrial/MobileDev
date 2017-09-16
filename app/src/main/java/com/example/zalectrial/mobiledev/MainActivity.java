@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Button temperatureButton = (Button) findViewById(R.id.temp_button);
         Button distanceButton = (Button) findViewById(R.id.distance_button);
 
+        // Add onClickListener to the temperature button
         temperatureButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Add onClickListener to the distance button
         distanceButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

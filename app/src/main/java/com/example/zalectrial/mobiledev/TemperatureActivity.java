@@ -14,7 +14,8 @@ public class TemperatureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperature);
 
-        final Button convertButton = (Button) findViewById(R.id.temp_convert_button);
+        // Add onClickListener to the convert temperature button
+        Button convertButton = (Button) findViewById(R.id.temp_convert_button);
         convertButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -22,12 +23,14 @@ public class TemperatureActivity extends AppCompatActivity {
                 EditText celsius = (EditText) findViewById(R.id.temp_celsius);
                 TextView convertedTemp = (TextView) findViewById(R.id.converted_temp);
 
+                // Convert the temperature
                 convertedTemp.setText(convertTemperature(String.valueOf(celsius.getText())));
             }
         });
         restoreState(savedInstanceState);
     }
 
+    // Convert celsius to fahrenheit
     private String convertTemperature(String celsius) {
 
         try {
@@ -40,6 +43,7 @@ public class TemperatureActivity extends AppCompatActivity {
         }
     }
 
+    // Save the field values when saving instance state
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         EditText celsius = (EditText) findViewById(R.id.temp_celsius);
@@ -48,6 +52,7 @@ public class TemperatureActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    // Restore the saved field values
     private void restoreState(Bundle state) {
         if (state == null) return;
         EditText celsius = (EditText) findViewById(R.id.temp_celsius);
