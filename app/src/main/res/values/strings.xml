@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MobileDev</string>
+    <string name="save">Save</string>
+    <string name="image_name">Name</string>
+    <string name="image_location">Location</string>
+    <string name="image_keywords">Keywords</string>
+    <string name="image_date">Date</string>
+    <string name="share">Share</string>
+    <string name="image_owner">Owner</string>
+    <string name="image_rating">Rating</string>
 </resources>
