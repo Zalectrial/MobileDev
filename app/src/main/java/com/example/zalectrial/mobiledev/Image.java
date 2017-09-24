@@ -11,13 +11,9 @@ class Image implements Parcelable {
     String email;
     int rating;
 
-    public Image(String name, String URL, String[] keywords, long date, String email, int rating) {
+    public Image(String name, long date) {
         this.name = name;
-        this.URL = URL;
-        this.keywords = keywords;
         this.date = date;
-        this.email = email;
-        this.rating = rating;
     }
 
     private Image(Parcel in) {
