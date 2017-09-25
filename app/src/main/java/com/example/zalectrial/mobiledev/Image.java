@@ -16,6 +16,30 @@ class Image implements Parcelable {
         this.date = date;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setURL(String URL) {
+        this.URL = URL;
+    }
+
+    public void setKeywords(String[] keywords) {
+        this.keywords = keywords;
+    }
+
+    public void setDate(long date) {
+        this.date = date;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
     private Image(Parcel in) {
         name = in.readString();
         URL = in.readString();
