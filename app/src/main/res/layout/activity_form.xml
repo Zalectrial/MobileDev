@@ -15,12 +15,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_name" />
+                android:text="@string/image_name"
+                style="@style/LabelStyle"/>
 
             <EditText
                 android:id="@+id/image_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/InformationStyle"
                 />
 
         </TableRow>
@@ -30,12 +32,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_location" />
+                android:text="@string/image_location"
+                style="@style/LabelStyle"/>
 
             <EditText
                 android:id="@+id/image_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/InformationStyle"
                 />
 
         </TableRow>
@@ -45,12 +49,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_keywords" />
+                android:text="@string/image_keywords"
+                style="@style/LabelStyle"/>
 
             <EditText
                 android:id="@+id/image_keywords"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/InformationStyle"
                 />
 
         </TableRow>
@@ -60,7 +66,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_date" />
+                android:text="@string/image_date"
+                style="@style/LabelStyle"/>
 
             <DatePicker
                 android:id="@+id/image_date"
@@ -75,7 +82,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/share" />
+                android:text="@string/share"
+                style="@style/LabelStyle"/>
 
             <ToggleButton
                 android:id="@+id/image_share"
@@ -90,12 +98,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_owner" />
+                android:text="@string/image_owner"
+                style="@style/LabelStyle"/>
 
             <EditText
                 android:id="@+id/image_owner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/InformationStyle"
                 />
 
         </TableRow>
@@ -105,12 +115,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/image_rating" />
+                android:text="@string/image_rating"
+                style="@style/LabelStyle"/>
 
             <EditText
                 android:id="@+id/image_rating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/InformationStyle"
                 />
 
         </TableRow>
