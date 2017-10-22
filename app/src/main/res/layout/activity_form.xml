@@ -1,120 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:stretchColumns="1"
     tools:context="com.example.zalectrial.mobiledev.FormActivity">
 
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_name" />
-
-        <EditText
-            android:id="@+id/image_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_location" />
-
-        <EditText
-            android:id="@+id/image_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_keywords" />
-
-        <EditText
-            android:id="@+id/image_keywords"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_date" />
-
-        <EditText
-            android:id="@+id/image_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/share" />
-
-        <EditText
-            android:id="@+id/image_share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_owner" />
-
-        <EditText
-            android:id="@+id/image_owner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <TableRow>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/image_rating" />
-
-        <EditText
-            android:id="@+id/image_rating"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </TableRow>
-
-    <Button
-        android:id="@+id/save_data"
-        android:layout_width="match_parent"
+    <TableLayout
         android:layout_height="wrap_content"
-        android:text="@string/save"/>
+        android:layout_width="match_parent">
 
-</TableLayout>
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_name" />
+
+            <EditText
+                android:id="@+id/image_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_location" />
+
+            <EditText
+                android:id="@+id/image_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_keywords" />
+
+            <EditText
+                android:id="@+id/image_keywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_date" />
+
+            <DatePicker
+                android:id="@+id/image_date"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/share" />
+
+            <ToggleButton
+                android:id="@+id/image_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_owner" />
+
+            <EditText
+                android:id="@+id/image_owner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_rating" />
+
+            <EditText
+                android:id="@+id/image_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </TableRow>
+
+        <Button
+            android:id="@+id/save_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"/>
+
+    </TableLayout>
+
+</ScrollView>

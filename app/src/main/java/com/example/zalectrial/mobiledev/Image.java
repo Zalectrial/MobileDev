@@ -6,10 +6,11 @@ import android.os.Parcelable;
 class Image implements Parcelable {
     String name;
     String URL;
-    String[] keywords;
+    String keywords;
     long date;
+    int share;
     String email;
-    int rating;
+    double rating;
 
     public Image(String name, long date) {
         this.name = name;
@@ -24,7 +25,7 @@ class Image implements Parcelable {
         this.URL = URL;
     }
 
-    public void setKeywords(String[] keywords) {
+    public void setKeywords(String keywords) {
         this.keywords = keywords;
     }
 
@@ -32,21 +33,26 @@ class Image implements Parcelable {
         this.date = date;
     }
 
+    public void setShare(int share) {
+        this.share = share;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 
     private Image(Parcel in) {
         name = in.readString();
         URL = in.readString();
-        keywords = in.createStringArray();
+        keywords = in.readString();
         date = in.readLong();
+        share = in.readInt();
         email = in.readString();
-        rating = in.readInt();
+        rating = in.readDouble();
     }
 
     public static final Creator<Image> CREATOR = new Creator<Image>() {
@@ -70,9 +76,10 @@ class Image implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeString(URL);
-        dest.writeStringArray(keywords);
+        dest.writeString(keywords);
         dest.writeLong(date);
+        dest.writeInt(share);
         dest.writeString(email);
-        dest.writeInt(rating);
+        dest.writeDouble(rating);
     }
 }
