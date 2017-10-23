@@ -17,10 +17,14 @@ import  com.example.zalectrial.mobiledev.R;
 import  com.example.zalectrial.mobiledev.calc.AstronomicalCalendar;
 import  com.example.zalectrial.mobiledev.calc.GeoLocation;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -132,5 +136,22 @@ public class Main extends Activity
 
         return locations;
     }
-	
+
+    public static class LocationFragment extends Fragment {
+
+        public LocationFragment() {
+
+        }
+
+        @Override
+        public void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+        }
+
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+            return inflater.inflate(R.layout.location_fragment, container, false);
+        }
+    }
 }
