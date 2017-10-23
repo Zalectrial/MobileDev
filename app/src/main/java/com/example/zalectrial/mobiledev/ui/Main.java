@@ -6,7 +6,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -17,6 +20,8 @@ import android.app.Activity;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
@@ -25,7 +30,12 @@ import android.widget.TextView;
 
 public class Main extends Activity 
 {
-
+    GeoLocation[] allLocations;
+    Spinner locationSpinner;
+    Calendar cal = Calendar.getInstance();
+    int year = cal.get(Calendar.YEAR);
+    int month = cal.get(Calendar.MONTH);
+    int day = cal.get(Calendar.DAY_OF_MONTH);
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) 
@@ -37,7 +47,7 @@ public class Main extends Activity
 
 	private void initializeUI()
 	{
-        Spinner locationSpinner = (Spinner) findViewById(R.id.locationSpinner);
+        locationSpinner = (Spinner) findViewById(R.id.locationSpinner);
         String[] locations;
         try {
             locations = readLocations();
@@ -46,21 +56,26 @@ public class Main extends Activity
         } catch (IOException e) {
             e.printStackTrace();
         }
+        locationSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                updateTime(year, month, day, allLocations[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 		DatePicker dp = (DatePicker) findViewById(R.id.datePicker);
-		Calendar cal = Calendar.getInstance();
-		int year = cal.get(Calendar.YEAR);
-		int month = cal.get(Calendar.MONTH);
-		int day = cal.get(Calendar.DAY_OF_MONTH);
 		dp.init(year,month,day,dateChangeHandler); // setup initial values and reg. handler
-		updateTime(year, month, day);
+		updateTime(year, month, day, allLocations[locationSpinner.getSelectedItemPosition()]);
 	}
     
-	private void updateTime(int year, int monthOfYear, int dayOfMonth)
+	private void updateTime(int year, int monthOfYear, int dayOfMonth, GeoLocation geoLocation)
 	{
-		TimeZone tz = TimeZone.getDefault();
-		GeoLocation geolocation = new GeoLocation("Melbourne", -37.50, 145.01, tz);
-		AstronomicalCalendar ac = new AstronomicalCalendar(geolocation);
+		AstronomicalCalendar ac = new AstronomicalCalendar(geoLocation);
 		ac.getCalendar().set(year, monthOfYear, dayOfMonth);
 		Date srise = ac.getSunrise();
 		Date sset = ac.getSunset();
@@ -79,7 +94,7 @@ public class Main extends Activity
 	{
 		public void onDateChanged(DatePicker dp, int year, int monthOfYear, int dayOfMonth)
 		{
-			updateTime(year, monthOfYear, dayOfMonth);
+			updateTime(year, monthOfYear, dayOfMonth, allLocations[locationSpinner.getSelectedItemPosition()]);
 		}	
 	};
 
@@ -105,6 +120,15 @@ public class Main extends Activity
         for (int i = 0; i < temp.size(); i++) {
             locations[i] = temp.get(i).getLocationName();
         }
+        Arrays.sort(locations);
+        allLocations = new GeoLocation[temp.size()];
+        temp.toArray(allLocations);
+        Arrays.sort(allLocations, new Comparator<GeoLocation>() {
+            @Override
+            public int compare(GeoLocation o1, GeoLocation o2) {
+                return o1.getLocationName().compareToIgnoreCase(o2.getLocationName());
+            }
+        });
 
         return locations;
     }
