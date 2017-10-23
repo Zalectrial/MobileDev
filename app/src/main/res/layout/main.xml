@@ -14,14 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <TextView
-        android:text="Melbourne, AU"
-        android:id="@+id/locationTV"
-        android:textSize="36sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
         <TableLayout
             android:id="@+id/TableLayout01"
             android:layout_width="fill_parent"
