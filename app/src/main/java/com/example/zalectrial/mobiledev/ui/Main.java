@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.TimeZone;
@@ -18,6 +17,8 @@ import  com.example.zalectrial.mobiledev.calc.AstronomicalCalendar;
 import  com.example.zalectrial.mobiledev.calc.GeoLocation;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -27,6 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.Spinner;
@@ -69,6 +71,17 @@ public class Main extends Activity
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        Button addLocation = (Button) findViewById(R.id.add_location_button);
+        addLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LocationFragment locationFragment = new LocationFragment();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(android.R.id.content, locationFragment).commit();
             }
         });
 
